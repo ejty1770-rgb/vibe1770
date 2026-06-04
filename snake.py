@@ -1,4 +1,10 @@
-import pygame
+try:
+    import pygame
+except ModuleNotFoundError as e:
+    raise ModuleNotFoundError(
+        "pygame가 설치되어 있지 않습니다. 'pip install pygame'로 설치한 후 다시 실행하세요."
+    ) from e
+
 import random
 from enum import Enum
 
